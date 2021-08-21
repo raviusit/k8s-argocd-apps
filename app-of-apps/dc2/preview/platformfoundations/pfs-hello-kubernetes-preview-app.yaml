@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pfs-hello-kubernetes-preview-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    path: dc2/preview
+    repoURL: "https://github.tools.sap/k8s-playground/hello-kubernetes-prod-config"
+    targetRevision: HEAD
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: pfs-preview
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+  project: default

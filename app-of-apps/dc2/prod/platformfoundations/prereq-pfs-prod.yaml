@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prereq-pfs-prod
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: pfs-prod
+    server: "https://kubernetes.default.svc"
+  source:
+    path: app-prerequisites/overlays/dc2/prod/platformfoundations
+    repoURL: "https://github.tools.sap/k8s-playground/k8s-argocd-apps.git"
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+  project: default

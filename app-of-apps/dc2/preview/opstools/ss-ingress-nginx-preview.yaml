@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ss-ingress-nginx-preview
+  namespace: argocd
+spec:
+  source:
+    path: kustomize/base
+    repoURL: "https://github.tools.sap/k8s-playground/k8s-ingress-nginx"
+    targetRevision: HEAD
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: ingress-nginx
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+  project: default
