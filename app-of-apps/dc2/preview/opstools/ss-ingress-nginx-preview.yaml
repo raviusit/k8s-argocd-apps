@@ -6,7 +6,7 @@ metadata:
 spec:
   source:
     path: kustomize/base
-    repoURL: "https://github.tools.sap/k8s-playground/k8s-ingress-nginx"
+    repoURL: "https://github.com/raviusit/k8s-ingress-nginx"
     targetRevision: HEAD
   destination:
     server: "https://kubernetes.default.svc"

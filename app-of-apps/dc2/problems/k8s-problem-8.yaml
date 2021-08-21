@@ -8,7 +8,7 @@ metadata:
 spec:
   source:
     path: k8s-problem-8
-    repoURL: "https://github.tools.sap/k8s-playground/k8s-solve-problems"
+    repoURL: "https://github.com/raviusit/k8s-solve-problems"
     targetRevision: HEAD
   destination:
     server: "https://kubernetes.default.svc"

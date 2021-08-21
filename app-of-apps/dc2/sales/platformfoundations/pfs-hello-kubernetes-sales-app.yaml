@@ -8,7 +8,7 @@ metadata:
 spec:
   source:
     path: dc2/sales
-    repoURL: "https://github.tools.sap/k8s-playground/hello-kubernetes-prod-config"
+    repoURL: "https://github.com/raviusit/hello-kubernetes-prod-config"
     targetRevision: HEAD
   destination:
     server: "https://kubernetes.default.svc"

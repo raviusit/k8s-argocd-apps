@@ -11,7 +11,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: app-prerequisites/overlays/dc2/sales/platformfoundations
-    repoURL: 'https://github.tools.sap/k8s-playground/k8s-argocd-apps.git'
+    repoURL: 'https://github.com/raviusit/k8s-argocd-apps.git'
     targetRevision: HEAD
   syncPolicy:
    automated:
